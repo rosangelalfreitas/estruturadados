@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int num[10];
+	int i, soma, maior = 0, menor = 0;
+	float media;
+
+	for (i = 0; i < 10; i++)
+	{
+		scanf("%d", &num[i]);
+		if (maior == 0)
+		{
+			maior = num[i];
+			menor = num[i];
+		}
+		if (num[i] > maior)
+			maior = num[i];
+		if (num[i] < menor)
+			menor = num[i];
+	}
+
+	soma = (maior + menor);
+	media = soma / 2.0;
+	printf("%.2f", media);
+}
