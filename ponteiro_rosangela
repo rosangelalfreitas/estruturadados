@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void num(int **a) {
+    *a = (int *) malloc(sizeof(int));
+    **a = 3;
+}
+int main() {
+    int *a = NULL;
+    num(&a);
+    printf("Valor de pi: %d\n", a);
+    printf("Valor do conteúdo apontado por pi: %d\n", *a);
+   
+    return 0;
